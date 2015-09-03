@@ -67,13 +67,5 @@ COMMIT
 -A INPUT -m set --match-set ipban src -j DROP
 -A INPUT -i eth0 -p tcp -m tcp --dport 22 -m state --state NEW -m recent --update --seconds 60 --hitcount 4 --name DEFAULT --rsource -j DROP
 -A OUTPUT -o lo -j ACCEPT
--A fail2ban-ssh -s 5.196.95.131/32 -j DROP
--A fail2ban-ssh -s 218.87.111.108/32 -j DROP
--A fail2ban-ssh -s 43.255.188.169/32 -j DROP
--A fail2ban-ssh -s 218.65.30.61/32 -j DROP
--A fail2ban-ssh -s 128.199.249.73/32 -j DROP
--A fail2ban-ssh -s 103.243.138.30/32 -j DROP
--A fail2ban-ssh -s 88.150.238.123/32 -j DROP
 -A fail2ban-ssh -j RETURN
 COMMIT
-
