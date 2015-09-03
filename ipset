@@ -1,0 +1,2 @@
+create waitlist hash:ip family inet hashsize 1024 maxelem 65536
+create ipban hash:ip family inet hashsize 1024 maxelem 65536
